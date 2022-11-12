@@ -1,0 +1,54 @@
+
+x = 20
+y = 10
+edad = 32
+curso = "Python desde cero"
+nombre = "JULIO Sanjuan"
+parrafo = """Ciña ¡oh Patria! tus sienes de oliva 
+De la paz el arcángel divino, 
+Que en el cielo tu eterno destino, 
+Por el dedo de Dios se escribió; 
+Mas si osare un extraño enemigo, 
+Profanar con su planta tu suelo, 
+Piensa ¡oh Patria querida! que el cielo 
+Un soldado en cada hijo te dio, 
+Un soldado en cada hijo te dio."""
+estatura = 1.71
+esInstructor = True
+arregloFrutas = ["manzana", "platano", "uva", "sandía"]
+tuplaCoordenadas = (-109.33, 98.209)
+objetoProducto = {"nombre": "iPhone X", "precio": 19999, "color":"space gray"}
+
+
+palabrasDelParrafo = parrafo.split(" ")
+print( type(palabrasDelParrafo[4]) )
+print( palabrasDelParrafo[4].replace("i", "*") )
+
+nombreConO = nombre.replace("o", "0")
+
+print( nombreConO )
+
+nombreConO = nombre.lower().replace("o", "0")
+
+print( nombreConO )
+
+nombreConO = nombre.lower().replace("o", "0").capitalize()
+
+print( nombreConO )
+
+palabrasDelNombre = nombre.lower().replace("o", "0").split(" ")
+nombreConO = palabrasDelNombre[0].capitalize() + " " + palabrasDelNombre[1].capitalize()
+
+print( nombreConO )
+
+
+"""
+ACTIVIDAD: Crear una operación que implique numeros, cadenas y listas:
+    Requisito usar encadenamiento de 4 niveles.
+    
+    Ejemplo:
+"""
+tema = "Tema 1"
+sigTema = int( tema.split(" ").pop() ) + 1 
+print("Tema "+ str(int( tema.split(" ").pop())+1))
+
