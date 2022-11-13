@@ -1,16 +1,18 @@
-numero = "10x"
+numero = "10Xt"
 #print( int(numero) )
 
 try:
     print( int(numero) )
+    print("otra cosa")
 except ValueError:
     print(f"{numero} No es un número válido")
+    print("send email")
 
 division = None
 divisor = 0
 try:
     division = 35 / divisor
-except ZeroDivisionError:
+except (ZeroDivisionError, ValueError):
     pass
 
 try:

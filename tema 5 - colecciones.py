@@ -1,24 +1,30 @@
 # list | lista | array | arreglo | vector 
-arregloFrutas = ["manzana", "platano"]
-
+arregloFrutas = ["manzana", "platano","pera"]
+puntosReacta = [ (10,2) , (5,4) ] 
+edadDeJulio = 32
 # tuple | tupla
-tuplaCoordenadas = (-109.33, 98.209)
+tuplaCoordenadas = (-109.33, 98.209, 10)
 
-# dict | diccionario | objeto
-objetoProducto = {"nombre": "Julio Sanjuan", "edad": 32, "estatura":1.71}
+# dict | diccionario | objeto ¡ JSON
+objetoProducto = {"nombre": "Julio Sanjuan", "edad": edadDeJulio, "estatura":1.71, "ubicaciones": [ ({"x":[1,2],"lat":-433443},2) , (5,4) ]}
+
+nombres =  [ "Julio", "David", "Esly" ]
+
+obj = { "nombres": nombres}
+
 
 
 #acceso a las colecciones
 
 # list
-print( arregloFrutas[0] )
+print( arregloFrutas[1] )
 
 # tuple
-x,y = tuplaCoordenadas
+x,y,z = tuplaCoordenadas
 print( x )
 
 # dict
-print( objetoProducto["nombre"] )
+print( objetoProducto["edad"] )
 
 
 """"
@@ -27,4 +33,9 @@ ACTIVIDAD: Crear 3 colleciones para el proyecto, de la siguiente forma:
     Una lista para guardar todas las cetegorias de productos que vamos a manejar
     Una tupla para representar el precio de un producto en MXN y en USD
 """
+
+
+
+
+
 

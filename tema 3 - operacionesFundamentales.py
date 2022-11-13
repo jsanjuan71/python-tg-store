@@ -46,6 +46,12 @@ diviConVariable = 10 / numeroCinco
 print( diviConVariable )
 
 
+#Residuo
+mod = 10 % numeroCinco
+
+
+
+
 # Operaciones
 print("_____ Operaciones fundamentales _____")
 radio = 3
@@ -55,10 +61,32 @@ print( circunferencia )
 base = 5.2
 altura = 3
 areaTriangulo = ( base * altura ) / 2
+
+
+
 print( areaTriangulo )
 
 """
 ACTIVIDAD: Sabiendo el precio de un producto:
-    Aplicarle un desceunto del 7% 
+    Aplicarle un descuento del 7% 
     Mostrar el precio final con IVA incluido
 """
+
+precio = 100
+#descuento = precio - ( precio * 0.07 )
+#precio = precio * 0.07
+#precio *= 0.07
+#precioConIva = (descuento / IVA) + descuento
+descuento = 7
+total = precio - ( precio * (descuento / 100) )
+total += total * (IVA / 100)
+
+total+=10
+
+print( total )
+
+
+# A + B infijas
+# +A  prefija  -5
+# A+  posfija  
+ 

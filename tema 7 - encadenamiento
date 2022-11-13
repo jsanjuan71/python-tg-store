@@ -3,7 +3,7 @@ x = 20
 y = 10
 edad = 32
 curso = "Python desde cero"
-nombre = "JULIO Sanjuan"
+nombre = "          JULIO Sanjuan  "
 parrafo = """Ciña ¡oh Patria! tus sienes de oliva 
 De la paz el arcángel divino, 
 Que en el cielo tu eterno destino, 
@@ -32,7 +32,7 @@ nombreConO = nombre.lower().replace("o", "0")
 
 print( nombreConO )
 
-nombreConO = nombre.lower().replace("o", "0").capitalize()
+nombreConO = nombre.lower().replace("o", "0").capitalize().strip()
 
 print( nombreConO )
 
@@ -42,13 +42,21 @@ nombreConO = palabrasDelNombre[0].capitalize() + " " + palabrasDelNombre[1].capi
 print( nombreConO )
 
 
+letras = ["a", "e", "i", "o"] 
+numeros = [4, 3, 1, 0]
+
+mapa = { "a":"4", "e":"3", "i":"1", "o":"0"}
+
+parrafo.replace( letras[0], str(numeros[0]) ).replace( letras[1], str(numeros[1]) )
+
 """
 ACTIVIDAD: Crear una operación que implique numeros, cadenas y listas:
     Requisito usar encadenamiento de 4 niveles.
     
     Ejemplo:
 """
-tema = "Tema 1"
+tema = "Tema 324"
 sigTema = int( tema.split(" ").pop() ) + 1 
-print("Tema "+ str(int( tema.split(" ").pop())+1))
+print("Tema "+ str(sigTema))
+print()
 

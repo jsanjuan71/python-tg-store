@@ -28,18 +28,20 @@ print( estatura )
 print( "Hola %s" % (nombre) )
 print( "Mides %5.1f" % (estatura) )
 
-nombreCentrado = nombre.center(80, "*")
+
+nombreCentrado = nombre.center(50, " ")
 print( nombreCentrado )
 
 nombreEnMayusculas = nombre.upper()
 print( nombreEnMayusculas )
 
 print( curso.center(80, " ") )
-print( "|%s|%s|%s|%s|" % ( 
-    arregloFrutas[0].center(20," "), 
-    arregloFrutas[1].center(20," "),
-    arregloFrutas[2].center(20," "),
-    arregloFrutas[3].center(20," ")) )
+print( "|%s|%s|%s|%s|%s" % ( 
+    arregloFrutas[0].center(15," "), 
+    arregloFrutas[1].center(15," "),
+    arregloFrutas[2].center(15," "),
+    arregloFrutas[3].center(15," "),
+    str(1000).center(15," ") ) )
 
 estaturaEnString = str(estatura)
 estaturaEnStringCentrada = estaturaEnString.center(80,".")
@@ -50,7 +52,7 @@ print( str(estatura).center(80,"_") )
 print( nombre.capitalize() )
 
 
-print( nombre.split() )
+print( nombre.split(" ") )
 
 palabrasDelParrafo = parrafo.split(" ")
 
@@ -75,3 +77,28 @@ ACTIVIDAD: Remplazar las vocales del parrafo usando el siguiente esquema:
 
     Mostrar el párrafo con el resultado final
 """
+print("ACTIVIDAD".center(80,"_"))
+parrafo = parrafo.replace("a", "4")
+parrafo = parrafo.replace("e", "3")
+parrafo = parrafo.replace("o", "0")
+parrafo = parrafo.replace("i", "1")
+print(parrafo)
+listaPalabras = parrafo.split(" ")
+primera = listaPalabras[0]
+primera = primera.upper()
+
+ultima =  listaPalabras[ len(listaPalabras) - 1]
+ultima = ultima.upper()
+
+listaPalabras[0] = primera
+listaPalabras[len(listaPalabras) - 1] = ultima
+
+print( str( listaPalabras ) )
+
+print( " ".join( listaPalabras ) )
+
+"erick".capitalize()
+
+#1.capitalize()
+
+#listaPalabras.join(" ")

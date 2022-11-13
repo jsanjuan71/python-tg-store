@@ -31,7 +31,8 @@ print(parrafo)
 print(estatura)
 print(esInstructor)
 print("________________")
-nombre = "Julio César Sanjuan"
+nombre = 'Julio Cesar Sanjuan el "profe"'
+nombre2 = "Julio \"el profe\" Sanjuan"
 print(nombre)
 
 estatura = 171
@@ -44,14 +45,15 @@ variable = 1
 laVariable = 1
 la_variable = 1
 la_variable_numerica = 1
-# 1lavariable = 1
-# laVariable*Dos = 1
+#for = 1
+#1lavariable = 1
+#laVariable*Dos = 1
 
 #Palabras reservadas
 #https://eiposgrados.com/blog-python/palabras-reservadas-python/
-"""
-Son aquellas palabras que son propias del lenguaje y no podemos utilizar para nombrar
-nuetras propias variables o funciones.
 
-Ejemplo: if, else, for, while, False, class, break, await, etc
-"""
+
+# Son aquellas palabras que son propias del lenguaje y no podemos utilizar para nombrar
+# nuetras propias variables o funciones.
+
+# Ejemplo: if, else, for, while, False, class, break, await, etc
