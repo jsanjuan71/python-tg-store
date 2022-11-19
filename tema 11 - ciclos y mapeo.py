@@ -40,7 +40,7 @@ ACTIVIDAD: Actualizar el siguiente inventario de productos:
 inventario = [
     {"nombre": "iPhone X", "precio": 19999, "existencia": 10 },
     {"nombre": "MacBook Pro 13 M1", "precio": 32000, "existencia": 5 },
-    {"nombre": "MAgic Mouse 2", "precio": 2500, "existencia": 50 }
+    {"nombre": "Magic Mouse 2", "precio": 2500, "existencia": 50 }
 ]
 """ Por cada producto: 
     Solicitar al usuario el nuevo precio y aumentarle 1% de comisión
