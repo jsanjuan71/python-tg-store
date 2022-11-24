@@ -1,7 +1,9 @@
 import os
 import requests
 from models.mappers.product import ProductMapper
-from tools.serializable import modelToJson
+from services.cache import CacheService
+
+cache = CacheService()
 
 class ProductService:
 
@@ -11,13 +13,21 @@ class ProductService:
         print("Product service")
 
     def searchByKeyword(self, keyword):
-        api_response = requests.get(f"{self.API_URL}/search?q={keyword}")
-        if(api_response.status_code == 200):
-            list = []
-            payload = api_response.json()
-            for value in payload.get("results"):
-                mapped = ProductMapper.toEntity(value)
-                list.append( ProductMapper.serialize(mapped) )
-            return list
-        else:
-            return api_response.status_code
+        cached = cache.get(keyword) #intentar obtener desde caché
+        if cached == None: # No existe en caché, invocar al API de ML
+            print("Getting from ML API")
+            api_response = requests.get(f"{self.API_URL}/search?q={keyword}")
+            if(api_response.status_code == 200):
+                list = []
+                payload = api_response.json()
+                for value in payload.get("results"):
+                    mapped = ProductMapper.toEntity(value)
+                    list.append( ProductMapper.serialize(mapped) )
+                cache.set(keyword, list) #Guardar en caché
+                return list
+                
+            else:
+                return api_response.status_code
+        else: #Existe en caché
+            print("Getting from cache")
+            return cached
