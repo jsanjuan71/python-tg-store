@@ -1,0 +1,44 @@
+# List comprehension | Comprehensión de listas | List on the fly | Listas al vuelo
+
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(lista)
+
+list_comprehension = [num+1 for num in range(10)]
+print(list_comprehension)
+
+curso = "Python desde cero by TecGurus"
+vocales = ['a','e','i','o','u']
+
+mayus = curso.upper()
+letrasMayus = []
+for letra in mayus:
+    letrasMayus.append(letra)
+print("letrasMayus", letrasMayus)
+
+mayusculas = [letra for letra in curso.upper()]
+print("letrasMayus comprehensive list", mayusculas)
+
+consonantes = []
+for letra in curso:
+    if letra not in vocales:
+        consonantes.append(letra)
+print("consonantes", consonantes)
+
+consonantes = [letra for letra in curso if letra not in vocales]
+print("consonantes", consonantes)
+
+
+consonantesResaltadas = [f"*{letra.upper()}*" if letra in vocales else letra.lower() for letra in curso]
+print("consonantesResaltadas", consonantesResaltadas)
+
+"""
+Actividad 1: Del ultimo ejemplo, pasarlo a su versiòn sin usar comprensión de listas
+"""
+
+"""
+Actividad 2: Usando comprensión de listas:
+    * Generar una lista de números 1 al 100
+    * Los numeros pares deben ser marcados con un asterisco a su derecha
+    * Los numeros nones deben ser mostrados tal cual
+"""
+

@@ -16,6 +16,8 @@ for fruta in arregloFrutas:
     print(f"Fruta: {fruta}")
 print("================================")
 
+objetoProducto["edad"]
+
 for key in objetoProducto:
     print(f"{key}: {objetoProducto[key]}")
 print("================================")
@@ -23,7 +25,7 @@ print("================================")
 for key, value in objetoProducto.items():
     print(f"{key}: {value}")
 
-opcion = None
+opcion = 0
 while opcion is not 0:
     try:
         opcion = int(input("Si quiere salir teclee 0, de lo contrario cualquier cosa."))
@@ -56,3 +58,40 @@ inventario = [
     |   iPhone X            |       $19 999     |           10          |       $199 990
     |   ETC   ................
 """
+def validaNumero(numero):
+    try:
+        return float(numero)
+    except ValueError:
+        return None
+
+def solicitarNumero(min, max, titulo, criterio):
+    num = None
+    while num == None or num <= min or num >= max:
+        try:
+            num = input(f"Teclee el nuevo {titulo} [{min}-{max}] de {criterio}: ")
+            num = validaNumero(num)
+        except ValueError:
+            num = -1
+    
+    return num
+
+def textoCentrado(texto, ancho, relleno):
+    return str(texto).center(ancho, relleno)
+
+
+ANCHO_CELDA = 20
+for producto in inventario:
+    precio = solicitarNumero(0.0, 999.0, "precio", producto['nombre'] )
+    producto["precio"] = precio * 1.01
+    cantidad = solicitarNumero(0.0, 99.0, "cantidad", producto['nombre'])
+    producto["existencia"] = cantidad
+
+print( " Inventario TG Store ".center(80,"_") )
+print( f"{'Producto'.center(20, ' ')}|{'Precio'.center(20, ' ')}|{'Existensia'.center(20, ' ')}|{'Total'.center(20, ' ')}" )
+for producto in inventario:
+    print( f"{textoCentrado(producto['nombre'], ANCHO_CELDA, ' ')}|{textoCentrado(producto['precio'], ANCHO_CELDA, ' ')}|{textoCentrado(producto['existencia'], ANCHO_CELDA, ' ')}|{ textoCentrado(float(producto['precio'])*float(producto['existencia']), ANCHO_CELDA, ' ')}" )
+
+
+
+
+
